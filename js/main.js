@@ -5,6 +5,32 @@ var gravedad;
 var velocidad;
 var tiempo;
 var pixelMetros;
+main();
+
+function main(){
+    $("#configuracion").hide();//ocultar
+    $("#guardarDatos").on("click", function(){
+        var planeta=$("#nombrePlaneta").val();
+        gravedad=$("#gravedad").val();
+        altura=$("#alturaGenerica").val();
+        borrar();
+        ajustarDatos(planeta);
+        $("#configuracion").show();//mostrar
+    })
+    $("#limpiar").click(function(){
+        borrar();
+    });
+    $("#objeto").click(function(){
+        simulador();
+    })
+    $("#reiniciar").click("click", function(){
+        reiniciar()
+    })
+    $("#guardarAltura").click(function(){
+        guardarAltura()
+    })
+}
+
 function simulador(){
     a=setInterval(function(){
         document.querySelector("#objeto").style.marginTop=contador+"px";
@@ -13,11 +39,12 @@ function simulador(){
         if(contador>pixelMetros){
             clearInterval(a);
             document.querySelector(".modal-body").style.marginBottom="0px";
-            bandera=true
+            bandera=true;
            
         }
     },pixelMetros/(tiempo*1000))
 }
+
 function guardarAltura(){
     altura=$("#altura").val();
     document.getElementById("altura").value="";
@@ -79,6 +106,7 @@ function ajustarDatos(planeta){
    }   
    document.getElementById("titulo").innerText=" ";
    document.getElementById("titulo").innerText="Simulador de gravedad de "+planeta+":\nAltura:  "+altura+" m\nGravedad:  "+gravedad+" m/s²\nVelocidad:  "+velocidad+" m/s\nTiempo en caer:  "+tiempo+" s";
+   $("#configuracion").hide();
 }
 
 function reiniciar(){
@@ -86,4 +114,10 @@ function reiniciar(){
     contador=0;
     document.querySelector("#objeto").style.marginTop=contador+"px";
     
+}
+
+function borrar(){
+    document.getElementById("nombrePlaneta").value="";
+    document.getElementById("gravedad").value="";
+    document.getElementById("alturaGenerica").value="";
 }
