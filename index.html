@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Gravedad</title>
+    <link rel="stylesheet" href="css/bootstrap.min .css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+
+    <div id="menu">
+        <center>
+            <h1>SELECCIONE LA GRAVEDAD DESEADA:</h1><br>
+            <label for="altura">Altura deseada en metros:</label>
+            <input type="number" id="altura">
+            <button type="button" class="btn btn-success" onclick="guardarAltura()">Guardar</button>
+            <br> <br> <br>
+        </center>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosMercurio()">
+            <h2>Planeta mercurio:</h2>
+            <img src="img/mercurio.png" alt="img planeta mercurio" width="200px" height="200px">
+            <P>gravedad de mercurio: 3,7 m/s²</P>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosVenus()">
+            <h2>Planeta venus:</h2>
+            <img src="img/venus.png" alt="img planeta venus" width="200px" height="200px">
+            <P>gravedad de venus: 8,87 m/s²</P>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosTierra()">
+            <h2>Planeta tierra:</h2>
+            <img src="img/Tierra.png" alt="img planeta tierra" width="200px" height="200px">
+            <P>gravedad de la tierra: 9,807 m/s²</P>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosMarte()">
+            <h2>Planeta marte:</h2>
+            <img src="img/Marte.png" alt="img planeta marte" width="200px" height="200px">
+            <p>gravedad de marte: 3,71 m/s²</p>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosJupiter()">
+            <h2>Planeta jupiter:</h2>
+            <img src="img/jupiter.png" alt="img planeta jupiter" width="200px" height="200px">
+            <p>gravedad de jupiter: 24,79 m/s²</p>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosSaturno()">
+            <h2>Planeta saturno:</h2>
+            <img src="img/saturno.png" alt="img planeta saturno" width="200px" height="200px">
+            <p>gravedad de saturno: 10,44 m/s²</p>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosUrano()">
+            <h2>Planeta urano:</h2>
+            <img src="img/urano.png" alt="img planeta urano" width="200px" height="200px">
+            <p>gravedad de urano: 8,87 m/s²</p>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosNeptuno()">
+            <h2>Planeta neptuno:</h2>
+            <img src="img/neptuno.png" alt="img planeta neptuno" width="200px" height="200px">
+            <p>gravedad de neptuno: 11,15 m/s²</p>
+        </button>
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#simulador"
+            onclick="ajustarDatosLuna()">
+            <h2>Luna:</h2>
+            <img src="img/luna.png" alt="img Luna" width="240px" height="200px">
+            <p>gravedad de la luna: 1,62 m/s²</p>
+        </button>
+    </div>
+    <!--Modal-->
+    <div class="modal fade" id="simulador" tabindex="-1" aria-labelledby="simulador" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" id="titulo">
+                    <h1 class="modal-title fs-5" id="simulador">Simulador de gravedad de </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div id="objeto">
+                        <center><img src="img/martillo.png" alt="img martillo" width="100px" height="100px"
+                                onclick="simulador()"></center>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">MENU</button>
+                    <button type="button" class="btn btn-warning" onclick="reiniciar()">REINICIAR</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="js/functions.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
