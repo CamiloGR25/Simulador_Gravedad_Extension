@@ -7,8 +7,8 @@
         "128": "img/Planeta Generico.png"
     },
     "action": {
-        "html": "index.html",
-        "js": "js/main.js",
-        "css": "css/bootstrap.min.css"
-    }
+        "default_popup": "index.html",
+        "default_title": "SimuladorGravedad"
+    }  
+    
 }

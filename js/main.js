@@ -7,6 +7,8 @@ var tiempo;
 var pixelMetros;
 main();
 
+
+
 function main(){
     $("#configuracion").hide();//ocultar
     $("#guardarDatos").on("click", function(){
@@ -17,18 +19,46 @@ function main(){
         ajustarDatos(planeta);
         $("#configuracion").show();//mostrar
     })
-    $("#limpiar").click(function(){
+    $("#mercurio").on("click",function(){
+        ajustarDatosMercurio();
+    });
+    $("#venus").on("click",function(){
+        ajustarDatosVenus();
+    });
+    $("#tierra").on("click",function(){
+        ajustarDatosTierra();
+    });
+    $("#marte").on("click",function(){
+        ajustarDatosMarte();
+    });
+    $("#jupiter").on("click",function(){
+        ajustarDatosJupiter();
+    });
+    $("#saturno").on("click",function(){
+        ajustarDatosSaturno();
+    });
+    $("#urano").on("click",function(){
+        ajustarDatosUrano();
+    });
+    $("#neptuno").on("click",function(){
+        ajustarDatosNeptuno();
+    });
+    $("#luna").on("click",function(){
+        ajustarDatosLuna();
+    });
+   
+    $("#limpiar").on("click",function(){
         borrar();
     });
-    $("#objeto").click(function(){
+    $("#objeto").on("click",function(){
         simulador();
-    })
-    $("#reiniciar").click("click", function(){
+    });
+    $("#reiniciar").on("click", function(){
         reiniciar()
-    })
-    $("#guardarAltura").click(function(){
+    });
+    $("#guardarAltura").on("click", function(){
         guardarAltura()
-    })
+    });
 }
 
 function simulador(){
